@@ -1,0 +1,14 @@
+.friend-card {
+    background-color: #4b675e;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 16px auto;
+    max-width: 500px;
+    text-align: left;
+    color: white;
+}
+
+.friend-card h3 {
+    margin: 0 0 8px 0;
+    color: #cfeee0;
+}

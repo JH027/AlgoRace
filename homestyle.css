@@ -4,6 +4,70 @@
     padding: 20px;
 }
 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    padding: 14px 24px;
+    background-color: #3f5850;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.nav-logo {
+    color: #4FB286;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 15px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.friends-btn {
+    background-color: #4FB286;
+    color: #17352b;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.friends-btn:hover {
+    background-color: rgba(220, 228, 170, 0.881);
+}
+
+
+
+
+
+.play-btn {
+    background-color: #4FB286;
+    color: #17352b;
+    font-weight: bold;
+}
+
+.play-btn:hover {
+    background-color: rgba(220, 228, 170, 0.881);
+}
+
 h1 {
     color: #4FB286;
     font-size: 80px;
@@ -13,16 +77,28 @@ h1 {
     margin-bottom: 20px;
 }
 
-.exercise-box {
+
+
+.image-box {
     width: 300px;
     margin: 0 auto 20px auto;
     text-align: center;
 }
 
-.exercise {
+/* .exercise {
     width: 100px;
     height: auto;
+} */
+
+.work {
+    width: 100px;
+    height:auto;
 }
+
+/* .cheer {
+    width: 100px;
+    height: auto;
+} */
 
 p {
     color: white;
@@ -32,3 +108,24 @@ p {
     line-height: 1.6;
     font-size: 18px;
 }
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 130px;
+    background-color: #3f5850;
+    z-index: -1;
+}
+
+.side-left {
+    left: 0;
+}
+
+.side-right {
+    right: 0;
+}
+
+/* body, p, .nav-btn, .nav-logo {
+    font-family: 'Nunito', 'Lucida Sans', sans-serif;
+} */
