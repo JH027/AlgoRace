@@ -1,14 +1,90 @@
+.friends-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.friend-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .friend-card {
     background-color: #4b675e;
     border-radius: 16px;
     padding: 16px 20px;
-    margin: 16px auto;
-    max-width: 500px;
     text-align: left;
     color: white;
+    width: 280px;
+    flex-shrink: 0;
 }
 
 .friend-card h3 {
-    margin: 0 0 8px 0;
+    margin: 0;
     color: #cfeee0;
+}
+
+.friend-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.friend-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background-color: #3f5850;
+    padding: 4px;
+}
+
+.laps-count {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    color: #a9c9bd;
+}
+
+.difficulty-bar {
+    display: flex;
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #3f5850;
+}
+
+.bar-easy { background-color: #4FB286; }
+.bar-medium { background-color: #d1a94f; }
+.bar-hard { background-color: #c1594f; }
+
+.difficulty-labels {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    margin-right: 4px;
+    margin-left: 8px;
+}
+
+.dot-easy { background-color: #4FB286; }
+.dot-medium { background-color: #d1a94f; }
+.dot-hard { background-color: #c1594f; }
+.dot:first-child { margin-left: 0; }
+
+.small-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    margin-top: 12px;
 }

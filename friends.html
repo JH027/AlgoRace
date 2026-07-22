@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends - ALGORACE</title>
     <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="friends.css">
 </head>
 <body>
+
+    <div class="side-panel side-left"></div>
+    <div class="side-panel side-right"></div>
+
     <nav class="navbar">
         <a href="home.html" class="nav-logo">ALGORACE</a>
         <div class="nav-links">
@@ -15,25 +20,87 @@
         </div>
     </nav>
 
-    <div class="side-panel side-left"></div>
-    <div class="side-panel side-right"></div>
-
     <div class="home-card">
-        <h1>Friends</h1>
-
-        <button class="secondary-btn">+ Add Friend</button>
-
-        <div class="friend-card">
-            <h3>Jamie</h3>
-            <p>Laps (problems solved): 42</p>
-            <p>Easy: 20 &nbsp; Medium: 15 &nbsp; Hard: 7</p>
+        <div class="friends-header">
+            <h1>Friends</h1>
+            <button class="secondary-btn">+ Add Friend</button>
         </div>
 
-        <div class="friend-card">
-            <h3>Alex</h3>
-            <p>Laps (problems solved): 30</p>
-            <p>Easy: 18 &nbsp; Medium: 10 &nbsp; Hard: 2</p>
+        <div class="friend-grid">
+
+            <div class="friend-card">
+                <div class="friend-top">
+                    <img src="work.png" alt="Jamie's avatar" class="friend-avatar">
+                    <div>
+                        <h3>Jamie</h3>
+                        <p class="laps-count">42 laps</p>
+                    </div>
+                </div>
+
+                <div class="difficulty-bar" data-easy="20" data-medium="15" data-hard="7">
+                    <span class="bar-easy"></span>
+                    <span class="bar-medium"></span>
+                    <span class="bar-hard"></span>
+                </div>
+
+                <p class="difficulty-labels">
+                    <span class="dot dot-easy"></span>Easy: 20
+                    <span class="dot dot-medium"></span>Medium: 15
+                    <span class="dot dot-hard"></span>Hard: 7
+                </p>
+
+                <button class="secondary-btn small-btn">View Problems</button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-top">
+                    <img src="work.png" alt="Alex's avatar" class="friend-avatar">
+                    <div>
+                        <h3>Alex</h3>
+                        <p class="laps-count">30 laps</p>
+                    </div>
+                </div>
+
+                <div class="difficulty-bar" data-easy="18" data-medium="10" data-hard="2">
+                    <span class="bar-easy"></span>
+                    <span class="bar-medium"></span>
+                    <span class="bar-hard"></span>
+                </div>
+
+                <p class="difficulty-labels">
+                    <span class="dot dot-easy"></span>Easy: 18
+                    <span class="dot dot-medium"></span>Medium: 10
+                    <span class="dot dot-hard"></span>Hard: 2
+                </p>
+
+                <button class="secondary-btn small-btn">View Problems</button>
+            </div>
+
         </div>
     </div>
+
+    <script>
+        function updateDifficultyBars() {
+            const bars = document.querySelectorAll('.difficulty-bar');
+
+            bars.forEach(bar => {
+                const easy = Number(bar.dataset.easy);
+                const medium = Number(bar.dataset.medium);
+                const hard = Number(bar.dataset.hard);
+                const total = easy + medium + hard;
+
+                const easyPercent = total === 0 ? 0 : (easy / total) * 100;
+                const mediumPercent = total === 0 ? 0 : (medium / total) * 100;
+                const hardPercent = total === 0 ? 0 : (hard / total) * 100;
+
+                bar.querySelector('.bar-easy').style.width = easyPercent + '%';
+                bar.querySelector('.bar-medium').style.width = mediumPercent + '%';
+                bar.querySelector('.bar-hard').style.width = hardPercent + '%';
+            });
+        }
+
+        updateDifficultyBars();
+    </script>
+
 </body>
 </html>
