@@ -10,7 +10,7 @@
 .friend-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(12px, 3vw, 20px);
     justify-content: center;
 }
 
@@ -20,7 +20,7 @@
     padding: 16px 20px;
     text-align: left;
     color: white;
-    width: 280px;
+    width: clamp(240px, 40vw, 280px);
     flex-shrink: 0;
 }
 
