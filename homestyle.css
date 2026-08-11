@@ -177,7 +177,7 @@ p {
     padding: 20px;
     color: white;
     width: clamp(220px, 30vw, 260px);
-    text-align: left;
+    text-align: center;
 }
 
 .step h3 {
@@ -189,5 +189,19 @@ p {
     margin: 0;
     font-size: clamp(14px, 1.6vw, 16px);
     line-height: 1.5;
-    text-align: left;
+    text-align: center;
+}
+
+.mascot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: clamp(40px, 6vw, 60px) auto 0 auto;
+    padding: 0 clamp(12px, 4vw, 20px);
+}
+
+.mascot-icon {
+    width: clamp(50px, 8vw, 80px);
+    height: auto;
 }
